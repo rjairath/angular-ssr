@@ -1,0 +1,15 @@
+<div class="searchDiv">
+  <input type="text" [(ngModel)]="searchQuery" />
+  <button (click)="getGif()" [disabled]="!searchQuery">Submit</button>
+</div>
+
+<div class="dispalyDiv">
+  <div *ngFor="let item of gifList">
+    <img
+      [src]="item.url"
+      alt="gif"
+      [height]="item.height"
+      [width]="item.width"
+    />
+  </div>
+</div>
