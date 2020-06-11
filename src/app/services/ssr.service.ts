@@ -8,7 +8,7 @@ export class SsrService {
   constructor(private http: HttpClient) {}
 
   url = "https://api.giphy.com/v1/gifs/search";
-  token = "6Xa325QUxoXpbxIGUvSioqKM3RO6CF5O";
+  token = process.env.GIPHY_KEY;
 
   getGif(searchQuery: string) {
     let url1 = `${this.url}?api_key=${this.token}&q=${searchQuery}&limit=10`;
